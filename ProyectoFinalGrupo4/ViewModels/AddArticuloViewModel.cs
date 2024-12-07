@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoFinalGrupo4.Services
+namespace ProyectoFinalGrupo4.ViewModels
 {
-    internal class ArticuloServices
+    internal class AddArticuloViewModel
     {
     }
 }
