@@ -67,10 +67,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModels\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\AddArticuloView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
