@@ -1,17 +1,19 @@
-﻿using ProyectoFinalGrupo4.Views;
+﻿using ProyectoFinalGrupo4.Services;
+using ProyectoFinalGrupo4.Views;
 
-namespace ProyectoFinalGrupo4
+namespace ProyectoFinalGrupo4;
+
+public partial class App : Application
 {
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
-        }
+    public static DatabaseService DatabaseService { get; private set; }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new MainEmpleadoView());
-        }
+    public App()
+    {
+        InitializeComponent();
+
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "tasks.db3");
+        DatabaseService = new DatabaseService(dbPath);
+
+        MainPage = new NavigationPage(new MainPage(DatabaseService));
     }
 }

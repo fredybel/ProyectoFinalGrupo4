@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoFinalGrupo4.ViewModels
+namespace ProyectoFinalGrupo4.Models
 {
-    internal class AddArticuloViewModel
+    internal class TaskItemStatus
     {
     }
 }
