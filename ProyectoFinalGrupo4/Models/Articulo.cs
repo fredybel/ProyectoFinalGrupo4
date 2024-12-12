@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using SQLite;
 
 namespace ProyectoFinalGrupo4.Models
 {
-    internal class Articulo
+    public class Articulo
     {
+        [PrimaryKey, AutoIncrement]
+        public string NombreArticulo { get; set; }
+
+        [PrimaryKey, AutoIncrement]
+        public int Valor { get; set; }
+
+        [PrimaryKey,  AutoIncrement]
+        public int Cantidad { get; set; }
     }
 }
