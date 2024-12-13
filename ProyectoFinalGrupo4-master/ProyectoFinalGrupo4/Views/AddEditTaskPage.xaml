@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ProyectoFinalGrupo4.Models"
+             x:Class="ProyectoFinalGrupo4.Views.AddEditTaskPage"
+             Title="Agregar/Editar Tarea">
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Título"
+               Text="{Binding Title}"/>
+
+        <Entry Placeholder="Descripción"
+               Text="{Binding Description}"/>
+
+        <Picker Title="Estado"
+                SelectedIndex="{Binding StatusIndex}">
+            <Picker.Items>
+                <x:String>PorHacer</x:String>
+                <x:String>EnProceso</x:String>
+                <x:String>Finalizada</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <StackLayout Orientation="Horizontal" 
+                     HorizontalOptions="Center"
+                     Spacing="20"
+                     Margin="20">
+            <Button Text="Guardar" 
+                    Clicked="OnSaveClicked"/>
+
+            <Button Text="Cancelar" 
+                    Clicked="OnCancelClicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
